@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Downtown Indy",
+    "street_address": "333 Walnut St.",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46203",
+    "phone": "317-834-8775"
+  },  
+   {
+    "id": 2,
+    "name": "Carmel Arts District",
+    "street_address": "500 Main St",
+    "city": "Carmel",
+    "state": "IN",
+    "zip": "48489",
+    "phone": "317-980-7896"
+  }, 
+   {
+    "id": 3,
+    "name": "Avon",
+    "street_address": "3556 Rockville Rd",
+    "city": "Avon",
+    "state": "IN",
+    "zip": "46168",
+    "phone": "317-615-8553"
+  } 
+
+]
