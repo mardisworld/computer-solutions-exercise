@@ -3,26 +3,26 @@ var app = angular.module('computer', ['ngRoute'])  // array of dependencies - al
 
 .config(['$routeProvider', function ($routeProvider) { // dependency injection - injecting routeProvider
   $routeProvider
-	.when('main', {
+	.when('/main', {
   	  templateUrl: 'main.html',
   	  controller: 'MainCtrl'
 })	// dot! (.)!
-	.when('about', {
+	.when('/about', {
   	  templateUrl: 'about.html', // about page isn't going to have its own controller
   	  controller: 'MainCtrl'
 })	// dot! (.)!
-	.when('services', {
+	.when('/services', {
   	  templateUrl: 'services.html',
   	  controller: 'ServicesCtrl'
 })	// dot! (.)!
-	.when('main', {
-  	  templateUrl: 'contact.html',
-  	  controller: 'ContactCtrl'
-})	// dot! (.)!
+// 	.when('main', {
+//   	  templateUrl: 'contact.html',
+//   	  controller: 'ContactCtrl'
+// })	// dot! (.)!
 		.otherwise({redirectTo: '/main'})
 }])
 
-.controller('MainCtrl', ['$scope', function ($scope) {	// if we want to pass something in to controller, we need to use a $scope
+.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {	// if we want to pass something in to controller, we need to use a $scope
   $http.get('services.json').then(function (response) {
    	  $scope.services = response.data
   })
